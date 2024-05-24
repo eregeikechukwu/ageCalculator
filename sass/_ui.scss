@@ -91,12 +91,12 @@ main {
 }
 
 .line {
-  width: 35rem;
+  width: 38rem;
   background-color: $color-lightgrey;
   height: 1px;
   border: none;
 
-  animation: width 3.2s ease-out;
+  animation: width 3.1s ease-out;
 
   @media only screen and (max-width: $bp-mobile) {
     width: 100%;
@@ -126,7 +126,7 @@ main {
   transform: translate(0, -50%);
   z-index: 3;
   transition: all 0.3s;
-  animation: slide 2s ease-out;
+  animation: slide 1.5s ease-out;
   cursor: pointer;
 
   @media only screen and (max-width: $bp-mobile) {
@@ -171,7 +171,7 @@ main {
     }
 
     100% {
-      width: 35rem;
+      width: 38rem;
     }
   }
 
