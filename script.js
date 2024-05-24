@@ -92,7 +92,7 @@ const calculateAge = function () {
       errEY.style.display = 'inline';
       errIY.style.display = 'none';
     } else {
-      errIM.style.display = 'inline';
+      errIY.style.display = 'inline';
       errEY.style.display = 'none';
     }
   } else {
