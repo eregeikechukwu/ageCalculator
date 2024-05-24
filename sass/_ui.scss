@@ -80,12 +80,14 @@ main {
 
 .span {
   position: absolute;
-  bottom: -25%;
+  bottom: -22%;
   left: 0;
   right: 0;
-  font-size: 0.9rem;
+  font-size: 0.75rem;
+  font-style: italic;
   color: $color-lightred;
   display: none;
+  // white-space: nowrap;
 }
 
 .line {

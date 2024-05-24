@@ -126,10 +126,11 @@ main {
 
 .span {
   position: absolute;
-  bottom: -25%;
+  bottom: -22%;
   left: 0;
   right: 0;
-  font-size: 0.9rem;
+  font-size: 0.75rem;
+  font-style: italic;
   color: hsl(0, 100%, 67%);
   display: none;
 }
