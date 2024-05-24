@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.
+0"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="age-calculator-app-main/assets/images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="sass/main.css" />
+    <title>Age Calculator</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <form class="input">
+          <div class="inputs">
+            <label for="day" class="labels lD">DAY</label>
+            <input type="number" class="num day" id="day" placeholder="DD" />
+
+            <span class="span errED">This field is required</span>
+            <span class="span errID">Must be a valid day</span>
+          </div>
+
+          <div class="inputs">
+            <label for="month" class="labels lM">MONTH</label>
+            <input
+              type="number"
+              class="num month"
+              id="month"
+              placeholder="MM"
+            />
+
+            <span class="span errEM">This field is required</span>
+            <span class="span errIM">Must be a valid month</span>
+          </div>
+
+          <div class="inputs">
+            <label for="year" class="labels lY">YEAR</label>
+            <input
+              type="number"
+              class="num year"
+              id="year"
+              placeholder="YYYY"
+            />
+
+            <span class="span errEY">This field is required</span>
+            <span class="span errIY">Must be in the past</span>
+          </div>
+        </form>
+
+        <div class="hr">
+          <hr class="line" />
+          <button class="btn">
+            <img
+              src="age-calculator-app-main/assets/images/icon-arrow.svg"
+              alt="arrow icon"
+              class="btn__arrow"
+            />
+          </button>
+        </div>
+
+        <div class="output">
+          <p class="output__outputs">
+            <span class="output__values oYears">--</span> years
+          </p>
+          <p class="output__outputs">
+            <span class="output__values oMonths">--</span> months
+          </p>
+          <p class="output__outputs">
+            <span class="output__values oDays">--</span> days
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

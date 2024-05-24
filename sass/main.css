@@ -1,0 +1,266 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  font-size: 65.5%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+}
+@media only screen and (max-width: 75rem) {
+  html,
+  body {
+    font-size: 30%;
+  }
+}
+@media only screen and (max-width: 37.5rem) {
+  html,
+  body {
+    font-size: 50%;
+  }
+}
+@media only screen and (max-width: 37.5rem) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+}
+
+main {
+  background-color: hsl(0, 0%, 94%);
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  background-color: hsl(0, 0%, 100%);
+  position: absolute;
+  min-height: 30rem;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 3px 0.4 rgba(0, 0, 0, 0.9);
+  border-radius: 12px;
+  border-bottom-right-radius: 55px;
+  padding: 3rem;
+}
+@media only screen and (max-width: 37.5rem) {
+  .container {
+    padding-top: 6rem;
+    min-width: 80vw;
+    min-height: 76vh;
+  }
+}
+
+.input {
+  width: 69%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+@media only screen and (max-width: 37.5rem) {
+  .input {
+    width: 100%;
+    gap: 0.9rem;
+  }
+}
+
+.inputs {
+  position: relative;
+}
+
+.labels {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: hsl(0, 1%, 44%);
+  letter-spacing: 1.5px;
+  margin-bottom: 3px;
+}
+@media only screen and (max-width: 37.5rem) {
+  .labels {
+    font-size: 1.2rem;
+  }
+}
+
+.num {
+  width: 8.4rem;
+  height: 3.9rem;
+  font-size: 1.5rem;
+  border: 1px solid hsl(0, 0%, 86%);
+  border-radius: 3px;
+  padding-left: 5px;
+  outline: none !important;
+  transition: all 0.3s;
+  font-weight: 800;
+}
+@media only screen and (max-width: 37.5rem) {
+  .num {
+    font-size: 1.8rem;
+    height: 5.5rem;
+  }
+}
+.num:focus {
+  border-color: hsl(259, 100%, 65%);
+}
+.num::-moz-placeholder {
+  font-weight: 800;
+  color: hsl(0, 1%, 44%);
+}
+.num::placeholder {
+  font-weight: 800;
+  color: hsl(0, 1%, 44%);
+}
+
+.span {
+  position: absolute;
+  bottom: -25%;
+  left: 0;
+  right: 0;
+  font-size: 0.9rem;
+  color: hsl(0, 100%, 67%);
+  display: none;
+}
+
+.line {
+  width: 35rem;
+  background-color: hsl(0, 0%, 86%);
+  height: 1px;
+  border: none;
+  animation: width 3.2s ease-out;
+}
+@media only screen and (max-width: 37.5rem) {
+  .line {
+    width: 100%;
+    animation: rWidth 1.5s ease-out;
+  }
+}
+
+.hr {
+  position: relative;
+  margin: 2.7rem 0 2.7rem 0;
+}
+@media only screen and (max-width: 37.5rem) {
+  .hr {
+    margin: 5rem 0 5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.btn {
+  background-color: hsl(259, 100%, 65%);
+  border: none;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index: 3;
+  transition: all 0.3s;
+  animation: slide 2s ease-out;
+  cursor: pointer;
+}
+@media only screen and (max-width: 37.5rem) {
+  .btn {
+    animation: btnE 1.5s;
+    right: 50%;
+    top: 50%;
+    transform: translate(50%, -50%);
+  }
+}
+@keyframes btnE {
+  0% {
+    transform: rotate(0);
+    top: -2020%;
+    right: 120%;
+  }
+  100% {
+    transform: rotate(360deg);
+    right: 42%;
+    top: -2020%;
+  }
+}
+.btn:hover, .btn:active {
+  background-color: hsl(0, 0%, 8%);
+}
+@keyframes rWidth {
+  0% {
+    width: 3rem;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes width {
+  0% {
+    width: 10rem;
+  }
+  100% {
+    width: 35rem;
+  }
+}
+@keyframes slide {
+  0% {
+    right: 50%;
+  }
+  100% {
+    right: 0;
+  }
+}
+.btn__arrow {
+  width: 3rem;
+}
+
+.output {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: -1rem;
+}
+.output__outputs {
+  font-size: 5rem;
+  font-weight: 900;
+  font-style: italic;
+  margin: 0;
+}
+.output__values {
+  font-size: 5.5rem;
+  color: hsl(259, 100%, 65%);
+  animation: land 3s;
+}
+@media only screen and (max-width: 37.5rem) {
+  .output__values {
+    font-size: 5rem;
+  }
+}
+@keyframes land {
+  0% {
+    transform: translateY(2.7rem);
+    opacity: 0;
+  }
+  80% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  90% {
+    transform: translateY(0.4rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}/*# sourceMappingURL=main.css.map */
