@@ -1,5 +1,7 @@
 'use strict';
 
+const container = document.querySelector('.container');
+
 const iday = document.querySelector('.day');
 const iMonth = document.querySelector('.month');
 const iYear = document.querySelector('.year');
@@ -151,3 +153,10 @@ mButton.addEventListener('click', calculateAge);
 // const dec = 'April 1 2007 ';
 // console.log(dec);
 // console.log(calculateAge());
+
+container.addEventListener('keydown', function (eventt) {
+  if (eventt.key === 'Enter' || eventt.keyCode === 13) {
+    console.log('enter iiihhuy');
+    calculateAge();
+  }
+});
